@@ -12,7 +12,13 @@ gem "stimulus-rails",  "1.2.1"
 gem "jbuilder",        "2.11.5"
 gem "puma",            "5.6.8"
 gem "bootsnap",        "1.16.0", require: false
+gem 'bootstrap-sass', '3.4.1'
 gem "sqlite3",         "1.6.1"
+gem "webpacker"
+
+
+
+
 
 group :development, :test do
   gem "debug",   "1.7.1", platforms: %i[ mri mingw x64_mingw ]
@@ -36,3 +42,9 @@ group :test do
   gem "guard-minitest",           "2.4.6"
   gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 end
+
+group :production do
+  gem 'pg', '1.1.4'
+end
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
